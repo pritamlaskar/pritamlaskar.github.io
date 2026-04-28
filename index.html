@@ -355,7 +355,7 @@
     }
     .stats-band-inner {
       max-width: 1160px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(4, 1fr);
+      display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 1px; background: var(--border);
       border-left: 1px solid var(--border);
       border-right: 1px solid var(--border);
@@ -531,6 +531,113 @@
     .work-cta-row p { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
 
     /* ══════════════════════════════════════
+       INDUSTRY TEMPLATES
+    ══════════════════════════════════════ */
+    #industries {
+      padding: 120px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+    .ind-head { max-width: 1160px; margin: 0 auto 52px; }
+    .ind-h {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      letter-spacing: -0.03em; line-height: 1.1; color: var(--ink); margin-top: 14px;
+    }
+    .ind-sub {
+      color: var(--muted); font-size: 0.97rem; line-height: 1.75;
+      margin-top: 12px; max-width: 580px;
+    }
+    .ind-grid {
+      max-width: 1160px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+    }
+    .ind-card {
+      border-radius: var(--r-xl); overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s;
+      position: relative; background: var(--white);
+      cursor: default;
+    }
+    .ind-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); }
+    .ind-browser {
+      height: 210px; position: relative;
+      display: flex; flex-direction: column;
+    }
+    .ind-chrome {
+      padding: 10px 14px; display: flex; align-items: center; gap: 8px;
+      background: rgba(0,0,0,0.18); flex-shrink: 0;
+    }
+    .ind-dots { display: flex; gap: 5px; }
+    .ind-dot { width: 7px; height: 7px; border-radius: 50%; }
+    .ind-dot-r { background: rgba(255,255,255,0.5); }
+    .ind-dot-y { background: rgba(255,255,255,0.35); }
+    .ind-dot-g { background: rgba(255,255,255,0.22); }
+    .ind-url-bar {
+      flex: 1; background: rgba(255,255,255,0.12); border-radius: 4px;
+      height: 16px; margin: 0 6px;
+    }
+    .ind-canvas {
+      flex: 1; display: flex; flex-direction: column;
+      padding: 14px 16px; gap: 7px; justify-content: center; align-items: flex-start;
+    }
+    .ind-mock-hero {
+      width: 100%; height: 36px; border-radius: 6px;
+      background: rgba(255,255,255,0.18);
+      display: flex; align-items: center; padding: 0 10px; gap: 6px;
+    }
+    .ind-mock-h-text {
+      height: 8px; border-radius: 3px; background: rgba(255,255,255,0.7);
+    }
+    .ind-mock-h-btn {
+      height: 14px; width: 36px; border-radius: 3px;
+      background: rgba(255,255,255,0.4); margin-left: auto; flex-shrink: 0;
+    }
+    .ind-mock-icon { font-size: 1.6rem; }
+    .ind-mock-name {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700; font-size: 0.78rem; color: rgba(255,255,255,0.92);
+      letter-spacing: -0.01em;
+    }
+    .ind-mock-blocks { display: flex; gap: 5px; width: 100%; }
+    .ind-mock-block {
+      flex: 1; height: 24px; border-radius: 4px;
+      background: rgba(255,255,255,0.11);
+    }
+    .ind-footer {
+      padding: 14px 18px; background: var(--white);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .ind-name {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700; font-size: 0.88rem; color: var(--ink);
+    }
+    .ind-type { font-size: 0.67rem; color: var(--muted); font-weight: 500; margin-top: 2px; }
+    .ind-price {
+      font-size: 0.73rem; font-weight: 700; color: var(--accent);
+      background: var(--accent-soft); padding: 3px 10px; border-radius: 100px;
+      white-space: nowrap;
+    }
+    .ind-overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,10,14,0.52);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .ind-card:hover .ind-overlay { opacity: 1; }
+    .ind-overlay-btn {
+      background: #fff; color: var(--ink);
+      padding: 10px 22px; border-radius: var(--r-sm);
+      font-size: 0.82rem; font-weight: 700;
+      text-decoration: none; transition: transform 0.2s;
+    }
+    .ind-overlay-btn:hover { transform: scale(1.04); }
+    .ind-cta-row { max-width: 1160px; margin: 40px auto 0; text-align: center; }
+    .ind-cta-row p { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
+
+    /* ══════════════════════════════════════
        SERVICES - DARK
     ══════════════════════════════════════ */
     #services {
@@ -553,7 +660,6 @@
       max-width: 500px; line-height: 1.75;
     }
 
-    /* 2-column grid */
     .svc-grid {
       max-width: 1160px; margin: 0 auto;
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
@@ -582,6 +688,17 @@
       border-color: rgba(91,74,247,0.22);
     }
     .svc-card.bundle::after { opacity: 1; }
+    .svc-card.custom-pricing {
+      grid-column: span 2;
+      background: transparent;
+      border: 1.5px dashed rgba(91,74,247,0.3);
+      border-radius: var(--r-lg);
+    }
+    .svc-card.custom-pricing:hover {
+      border-color: rgba(91,74,247,0.55);
+      background: rgba(91,74,247,0.04);
+      transform: translateY(-3px);
+    }
 
     .svc-ico {
       width: 44px; height: 44px; border-radius: 10px;
@@ -650,6 +767,44 @@
       filter: brightness(1.1);
     }
 
+    /* Custom pricing card inner */
+    .custom-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .custom-left { flex: 1; min-width: 280px; }
+    .custom-right { flex-shrink: 0; text-align: right; }
+    .custom-label {
+      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+      color: #818cf8; margin-bottom: 10px;
+    }
+    .custom-h {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800; font-size: 1.3rem; letter-spacing: -0.02em; line-height: 1.25;
+      color: #fff; margin-bottom: 12px;
+    }
+    .custom-p {
+      font-size: 0.86rem; color: rgba(255,255,255,0.4); line-height: 1.75; max-width: 520px;
+    }
+    .custom-price-label {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800; font-size: 1.8rem; letter-spacing: -0.03em;
+      color: #fff; line-height: 1; margin-bottom: 6px;
+    }
+    .custom-price-sub { font-size: 0.74rem; color: rgba(255,255,255,0.28); margin-bottom: 18px; }
+    .btn-custom {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1.5px solid rgba(91,74,247,0.45); color: #818cf8;
+      padding: 13px 24px; border-radius: var(--r-sm);
+      font-size: 0.87rem; font-weight: 700; letter-spacing: -0.01em;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .btn-custom:hover {
+      background: rgba(91,74,247,0.15); border-color: var(--accent);
+      color: #fff; transform: translateY(-2px);
+    }
+
     /* ══════════════════════════════════════
        PROCESS
     ══════════════════════════════════════ */
@@ -672,9 +827,9 @@
     .step-n {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-weight: 800; font-size: 4rem; letter-spacing: -0.05em;
-      color: var(--border); line-height: 1; margin-bottom: 14px; transition: color 0.25s;
+      color: rgba(91,74,247,0.14); line-height: 1; margin-bottom: 14px; transition: color 0.25s;
     }
-    .step:hover .step-n { color: #ddddf0; }
+    .step:hover .step-n { color: rgba(91,74,247,0.32); }
     .step-t {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-weight: 700; font-size: 1rem; letter-spacing: -0.02em;
@@ -784,30 +939,44 @@
     ══════════════════════════════════════ */
     @media (max-width: 1100px) {
       .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-      .hero-photo-col { flex-direction: row; align-items: center; }
+      .hero-photo-col { order: -1; flex-direction: row; align-items: center; justify-content: center; }
       .about-grid { grid-template-columns: 1fr; gap: 60px; }
       .bc-1,.bc-2,.bc-3,.bc-4 { grid-column: span 12; }
       .bento { grid-auto-rows: 220px; }
       .bundle-row { grid-template-columns: 1fr; gap: 28px; }
       .bundle-price-col { text-align: left; }
       .steps-row { grid-template-columns: repeat(2,1fr); }
-      .stats-band-inner { grid-template-columns: repeat(2,1fr); }
+      .stats-band-inner { grid-template-columns: repeat(3,1fr); }
+      .ind-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; }
       .avail-pill { display: none; }
-      #about, #work, #services, #process, #book, .hero, .cta-banner { padding: 80px 20px; }
+      #about, #work, #services, #process, #book, .hero, .cta-banner, #industries { padding: 80px 20px; }
       .stats-band { padding: 0 20px; }
       .stats-band-inner { grid-template-columns: repeat(2,1fr); }
       .steps-row { grid-template-columns: 1fr; border-radius: var(--r-lg); }
       .svc-grid { grid-template-columns: 1fr; }
-      .svc-card.bundle { grid-column: span 1; }
-      .hero-photo-col { display: none; }
+      .svc-card.bundle, .svc-card.custom-pricing { grid-column: span 1; }
+      .hero-photo-col {
+        display: flex; order: -1; justify-content: center; align-items: center;
+        flex-direction: column; margin-bottom: 12px;
+      }
+      .photo-ring { width: 140px; }
+      .hero-photo { width: 140px; height: 140px; }
+      .photo-placeholder { width: 140px; height: 140px; }
+      .float-card { display: none; }
       .cta-inner { flex-direction: column; }
       footer { padding: 44px 20px 28px; }
       .footer-links { display: none; }
       .hero-stats { gap: 28px; }
+      .ind-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .custom-inner { flex-direction: column; gap: 24px; }
+      .custom-right { text-align: left; }
+    }
+    @media (max-width: 480px) {
+      .ind-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -822,6 +991,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#industries">Industries</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#book">Contact</a></li>
@@ -926,12 +1096,8 @@
       <div class="stat-desc">First deliverable turnaround on every project</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-big"><span class="grad">4</span></div>
-      <div class="stat-desc">Core services covering your full digital presence</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-big">$<span class="grad" data-count="400">0</span></div>
-      <div class="stat-desc">Full-bundle monthly rate. Agency value, freelance price.</div>
+      <div class="stat-big"><span class="grad" data-count="8">0</span>+</div>
+      <div class="stat-desc">Industries served with tailored websites and strategies</div>
     </div>
   </div>
 </div>
@@ -1042,7 +1208,7 @@
       <img src="Card 2.png" alt="Sophie's B&B Christmas Campaign" />
       <div class="bento-overlay">
         <div class="bento-cat">Social Media · Campaign</div>
-        <div class="bento-title">Sophie's B&B — Christmas Campaign</div>
+        <div class="bento-title">Sophie's B&amp;B — Christmas Campaign</div>
         <div class="bento-arrow">View on Behance <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></div>
       </div>
     </a>
@@ -1073,6 +1239,363 @@
   </div>
 </section>
 
+<!-- INDUSTRY TEMPLATES -->
+<section id="industries">
+  <div class="ind-head reveal">
+    <div class="label">Built for Every Industry</div>
+    <h2 class="ind-h">A tailored website for<br/>your type of business.</h2>
+    <p class="ind-sub">Every industry has its own customers, its own language, and its own conversion triggers. I design websites that speak directly to each audience, not generic templates.</p>
+  </div>
+
+  <div class="ind-grid">
+
+    <!-- HVAC -->
+    <div class="ind-card reveal">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #0f2a50 0%, #1d4ed8 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:55%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">🔧</div>
+            <div>
+              <div class="ind-mock-name">Pro HVAC Services</div>
+              <div style="height:5px; width:80px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">HVAC</div>
+          <div class="ind-type">Heating, Cooling and Plumbing</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+    <!-- Cafe -->
+    <div class="ind-card reveal d1">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #2d1007 0%, #92400e 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:45%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">☕</div>
+            <div>
+              <div class="ind-mock-name">The Daily Grind Cafe</div>
+              <div style="height:5px; width:90px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">Cafe</div>
+          <div class="ind-type">Coffee Shop and Bakery</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+    <!-- Restaurant -->
+    <div class="ind-card reveal d2">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #7f1d1d 0%, #dc2626 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:50%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">🍽️</div>
+            <div>
+              <div class="ind-mock-name">Bella Cucina Ristorante</div>
+              <div style="height:5px; width:85px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">Restaurant</div>
+          <div class="ind-type">Dining and Fine Cuisine</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+    <!-- Car Wash -->
+    <div class="ind-card reveal d3">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #0c4a6e 0%, #0ea5e9 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:60%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">🚗</div>
+            <div>
+              <div class="ind-mock-name">CrystalClean Car Wash</div>
+              <div style="height:5px; width:88px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">Car Wash</div>
+          <div class="ind-type">Auto Care and Detailing</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+    <!-- Boutique -->
+    <div class="ind-card reveal">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #500724 0%, #be185d 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:40%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">👗</div>
+            <div>
+              <div class="ind-mock-name">Velvet Rose Boutique</div>
+              <div style="height:5px; width:82px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">Boutique</div>
+          <div class="ind-type">Fashion and Apparel</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+    <!-- Nail Salon -->
+    <div class="ind-card reveal d1">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #2e1065 0%, #7c3aed 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:50%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">💅</div>
+            <div>
+              <div class="ind-mock-name">Gloss Nail Studio</div>
+              <div style="height:5px; width:75px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">Nail Salon</div>
+          <div class="ind-type">Beauty and Wellness</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+    <!-- B&B -->
+    <div class="ind-card reveal d2">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #14532d 0%, #16a34a 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:55%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">🏡</div>
+            <div>
+              <div class="ind-mock-name">The Meadow Inn</div>
+              <div style="height:5px; width:70px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">Bed and Breakfast</div>
+          <div class="ind-type">Hospitality and Lodging</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+    <!-- Real Estate -->
+    <div class="ind-card reveal d3">
+      <div class="ind-browser" style="background: linear-gradient(145deg, #1c1917 0%, #57534e 100%);">
+        <div class="ind-chrome">
+          <div class="ind-dots">
+            <div class="ind-dot ind-dot-r"></div>
+            <div class="ind-dot ind-dot-y"></div>
+            <div class="ind-dot ind-dot-g"></div>
+          </div>
+          <div class="ind-url-bar"></div>
+        </div>
+        <div class="ind-canvas">
+          <div class="ind-mock-hero">
+            <div class="ind-mock-h-text" style="width:48%;"></div>
+            <div class="ind-mock-h-btn"></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="ind-mock-icon">🏢</div>
+            <div>
+              <div class="ind-mock-name">Pinnacle Real Estate</div>
+              <div style="height:5px; width:84px; border-radius:2px; background:rgba(255,255,255,0.25); margin-top:4px;"></div>
+            </div>
+          </div>
+          <div class="ind-mock-blocks" style="margin-top:8px;">
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+            <div class="ind-mock-block"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ind-footer">
+        <div>
+          <div class="ind-name">Real Estate</div>
+          <div class="ind-type">Property and Listings</div>
+        </div>
+        <div class="ind-price">From $150</div>
+      </div>
+      <div class="ind-overlay">
+        <a href="#book" class="ind-overlay-btn">Get This Style →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ind-cta-row reveal">
+    <p>Don't see your industry? I build for any local business type.</p>
+    <a href="#book" class="btn-primary" style="display:inline-flex; margin:0 auto;">
+      <span>Discuss Your Industry</span>
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg>
+    </a>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
   <div class="svc-head reveal">
@@ -1083,7 +1606,24 @@
 
   <div class="svc-grid">
 
+    <!-- 1. Reputation $100/mo -->
     <div class="svc-card reveal d1">
+      <div class="svc-ico">⭐</div>
+      <div class="svc-outcome">Reviews that build trust on autopilot</div>
+      <h3>Reputation Management</h3>
+      <p>I monitor your Google reviews, respond professionally on your behalf, and run systems that generate more 5-star reviews every month automatically.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Review monitoring</span>
+        <span class="svc-tag">AI-crafted responses</span>
+        <span class="svc-tag">Review generation</span>
+        <span class="svc-tag">Monthly report</span>
+      </div>
+      <div class="svc-price">$100 <sub>/month</sub></div>
+      <div class="svc-note">Full Google presence management</div>
+    </div>
+
+    <!-- 2. Website $150 one-time -->
+    <div class="svc-card reveal d2">
       <div class="svc-ico">🌐</div>
       <div class="svc-outcome">A website that closes clients</div>
       <h3>Website Design and SEO</h3>
@@ -1099,22 +1639,24 @@
       <div class="svc-note">Delivered in 72 hours</div>
     </div>
 
-    <div class="svc-card reveal d2">
-      <div class="svc-ico">⭐</div>
-      <div class="svc-outcome">Reviews that build trust on autopilot</div>
-      <h3>Reputation Management</h3>
-      <p>I monitor your Google reviews, respond professionally on your behalf, and run systems that generate more 5-star reviews every month automatically.</p>
+    <!-- 3. Automation $150/mo -->
+    <div class="svc-card reveal d1">
+      <div class="svc-ico">⚙️</div>
+      <div class="svc-outcome">Systems that work while you sleep</div>
+      <h3>Automation Workflows</h3>
+      <p>End-to-end workflows that run without you. Lead capture, CRM updates, research bots, data collection, and follow-up sequences, built and maintained month after month.</p>
       <div class="svc-tags">
-        <span class="svc-tag">Review monitoring</span>
-        <span class="svc-tag">AI-crafted responses</span>
-        <span class="svc-tag">Review generation</span>
-        <span class="svc-tag">Monthly report</span>
+        <span class="svc-tag">Make and Airtable</span>
+        <span class="svc-tag">Lead management</span>
+        <span class="svc-tag">Data collection</span>
+        <span class="svc-tag">AI pipelines</span>
       </div>
-      <div class="svc-price">$100 <sub>/month</sub></div>
-      <div class="svc-note">Full Google presence management</div>
+      <div class="svc-price">$150 <sub>/month</sub></div>
+      <div class="svc-note">Built, maintained, and improved</div>
     </div>
 
-    <div class="svc-card reveal d1">
+    <!-- 4. Social Media $200/mo -->
+    <div class="svc-card reveal d2">
       <div class="svc-ico">📱</div>
       <div class="svc-outcome">Content that drives traffic all year</div>
       <h3>Social Media and AI Photos</h3>
@@ -1131,21 +1673,7 @@
       <div class="svc-note">Fresh content, every single month</div>
     </div>
 
-    <div class="svc-card reveal d2">
-      <div class="svc-ico">⚙️</div>
-      <div class="svc-outcome">Systems that work while you sleep</div>
-      <h3>Automation Workflows</h3>
-      <p>End-to-end workflows that run without you. Lead capture, CRM updates, research bots, data collection, and follow-up sequences, built and maintained month after month.</p>
-      <div class="svc-tags">
-        <span class="svc-tag">Make and Airtable</span>
-        <span class="svc-tag">Lead management</span>
-        <span class="svc-tag">Data collection</span>
-        <span class="svc-tag">AI pipelines</span>
-      </div>
-      <div class="svc-price">$150 <sub>/month</sub></div>
-      <div class="svc-note">Built, maintained, and improved</div>
-    </div>
-
+    <!-- 5. Bundle $500/mo -->
     <div class="svc-card bundle reveal d3">
       <div class="bundle-row">
         <div>
@@ -1162,10 +1690,24 @@
           </div>
         </div>
         <div class="bundle-price-col">
-          <div class="bundle-big">$400 <sub>/mo</sub></div>
-          <span class="bundle-note">All services. One flat rate.</span>
-          <br/>
+          <div class="bundle-big">$500<sub>/mo</sub></div>
           <a href="#book" class="btn-bundle">Get Started →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Custom Pricing -->
+    <div class="svc-card custom-pricing reveal d4">
+      <div class="custom-inner">
+        <div class="custom-left">
+          <div class="custom-label">Custom Engagement</div>
+          <div class="custom-h">Something specific in mind?<br/>Let's build it together.</div>
+          <p class="custom-p">Not every business fits a template. If you have a unique project, a specific stack, a niche industry, or a problem that needs a bespoke solution, book a call and we'll map out exactly what you need and what it costs. No guesswork. No surprises.</p>
+        </div>
+        <div class="custom-right">
+          <div class="custom-price-label">Custom</div>
+          <div class="custom-price-sub">Scoped after a free discovery call</div>
+          <a href="#book" class="btn-custom">Start a Conversation →</a>
         </div>
       </div>
     </div>
@@ -1248,6 +1790,7 @@
     <ul class="footer-links">
       <li><a href="#about">About</a></li>
       <li><a href="#work">Work</a></li>
+      <li><a href="#industries">Industries</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#book">Book a Call</a></li>
     </ul>
@@ -1283,7 +1826,7 @@ if (!isMobile) {
     ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
     requestAnimationFrame(tick);
   })();
-  document.querySelectorAll('a,button,.chip,.stack-card,.bento-card,.svc-card,.step').forEach(el => {
+  document.querySelectorAll('a,button,.chip,.stack-card,.bento-card,.svc-card,.step,.ind-card').forEach(el => {
     el.addEventListener('mouseenter', () => {
       ring.style.width = ring.style.height = '56px';
       ring.style.borderColor = 'rgba(91,74,247,0.45)';
