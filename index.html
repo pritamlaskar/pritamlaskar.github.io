@@ -345,6 +345,41 @@
     .m-item::after { content: '·'; color: var(--accent); margin-left: 28px; font-size: 1rem; }
 
     /* ══════════════════════════════════════
+       LOGO STRIP (PREVIOUS ORGANIZATIONS)
+    ══════════════════════════════════════ */
+    .logo-strip {
+      background: var(--white);
+      padding: 44px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-strip-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; gap: 44px; flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .logo-strip-label {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted-2); white-space: nowrap; flex-shrink: 0;
+    }
+    .logo-strip-logos {
+      display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+      flex: 1; justify-content: flex-end;
+    }
+    .logo-strip-logos img {
+      height: 34px; width: auto; max-width: 110px; object-fit: contain;
+      filter: grayscale(100%); opacity: 0.55;
+      transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+    }
+    .logo-strip-logos img:hover {
+      filter: grayscale(0%); opacity: 1; transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .logo-strip { padding: 32px 20px; }
+      .logo-strip-inner { justify-content: center; text-align: center; }
+      .logo-strip-logos { justify-content: center; gap: 28px; }
+    }
+
+    /* ══════════════════════════════════════
        STATS BAND
     ══════════════════════════════════════ */
     .stats-band {
@@ -1081,6 +1116,19 @@
   <div class="marquee-track">
     <span class="m-item">AI Brand Visuals</span><span class="m-item">Campaign Imagery</span><span class="m-item">Brand Strategy</span><span class="m-item">Visual Identity</span><span class="m-item">Automation Workflows</span><span class="m-item">Website Design</span><span class="m-item">Landing Pages</span><span class="m-item">Product Photography</span><span class="m-item">Launch Campaigns</span><span class="m-item">CRM Integration</span><span class="m-item">AI Prompting</span><span class="m-item">Digital Presence</span>
     <span class="m-item">AI Brand Visuals</span><span class="m-item">Campaign Imagery</span><span class="m-item">Brand Strategy</span><span class="m-item">Visual Identity</span><span class="m-item">Automation Workflows</span><span class="m-item">Website Design</span><span class="m-item">Landing Pages</span><span class="m-item">Product Photography</span><span class="m-item">Launch Campaigns</span><span class="m-item">CRM Integration</span><span class="m-item">AI Prompting</span><span class="m-item">Digital Presence</span>
+  </div>
+</div>
+
+<!-- LOGO STRIP -->
+<div class="logo-strip">
+  <div class="logo-strip-inner">
+    <div class="logo-strip-label">Previously At</div>
+    <div class="logo-strip-logos">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxtsu2nlWxrAXIonL_rdY28NR6bhf7X8o2kezyAFKSg&s=10" alt="Tesco Ireland" onerror="this.style.display='none';" />
+      <img src="https://pbs.twimg.com/profile_images/986106348688453634/ixGrpkE8_400x400.jpg" alt="Crimson Education" onerror="this.style.display='none';" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2DiurghSQlQPlagz_8WuNNNkN0Y-l6Vbf6wq65Ace1g&s=10" alt="Centra Ireland" onerror="this.style.display='none';" />
+      <img src="https://flagcdn.com/w320/un.png" alt="United Nations" onerror="this.style.display='none';" />
+    </div>
   </div>
 </div>
 
