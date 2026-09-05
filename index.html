@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pritam Laskar — Brand, Web & Growth Systems for Local Businesses</title>
-<meta name="description" content="I build the websites, visuals, and systems that let small and medium local businesses look and run like an agency-backed brand, without the agency overhead." />
+<title>Pritam Laskar — Strategy, Content & Digital Systems</title>
+<meta name="description" content="I help organizations turn what they know into what their audience needs to understand — research and strategy, then the content, creative, and systems to execute it." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -249,7 +249,7 @@
      STATS BAND
   ══════════════════════════════════════ */
   .stats-band { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 48px; }
-  .stats-band-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stats-band-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); }
   .stat-cell { padding: 44px 36px; border-left: 1px solid var(--border); }
   .stat-cell:first-child { border-left: none; padding-left: 0; }
   .stat-big { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: clamp(2.2rem, 3.4vw, 3rem); letter-spacing: -0.03em; color: var(--ink); line-height: 1; margin-bottom: 10px; }
@@ -346,11 +346,33 @@
      PROCESS
   ══════════════════════════════════════ */
   .steps-row { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+  .steps-row.cols-5 { grid-template-columns: repeat(5, 1fr); }
   .step { background: #fff; padding: 32px 26px; border-left: 1px solid var(--border); }
   .step:first-child { border-left: none; }
   .step-n { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--accent); margin-bottom: 16px; }
   .step-t { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: 10px; }
   .step-d { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+  /* ══════════════════════════════════════
+     CASE STUDY BLOCK
+  ══════════════════════════════════════ */
+  .case-block { max-width: 1180px; margin: 0 auto; background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+  .case-top { padding: 34px 36px 26px; border-bottom: 1px solid var(--border); }
+  .case-tag { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .case-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 10px; }
+  .case-note { font-size: 0.84rem; color: var(--muted-2); line-height: 1.6; max-width: 720px; }
+  .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .case-cell { padding: 26px 30px; border-left: 1px solid var(--border); border-top: 1px solid var(--border); }
+  .case-cell:nth-child(3n+1) { border-left: none; }
+  .case-cell:nth-child(-n+3) { border-top: none; }
+  .case-label { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 10px; }
+  .case-p { font-size: 0.87rem; color: var(--muted); line-height: 1.7; }
+  .case-p strong { color: var(--ink); }
+  @media (max-width: 768px) {
+    .case-grid { grid-template-columns: 1fr; }
+    .case-cell { border-left: none !important; border-top: 1px solid var(--border) !important; }
+    .case-cell:first-child { border-top: none !important; }
+  }
 
   /* ══════════════════════════════════════
      SERVICES (dark)
@@ -473,8 +495,8 @@
     .about-grid { grid-template-columns: 1fr; gap: 50px; }
     .work-grid, .ads-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-row { grid-template-columns: repeat(2,1fr); }
+    .steps-row.cols-5 { grid-template-columns: repeat(2,1fr); }
     .step:nth-child(3) { border-left: none; }
-    .stats-band-inner { grid-template-columns: repeat(3,1fr); }
     .svc-grid { grid-template-columns: 1fr; }
     .svc-card.bundle, .svc-card.custom-pricing { grid-column: span 1; }
     .tm-grid { grid-template-columns: repeat(2, 1fr); }
@@ -504,6 +526,7 @@
     .stat-cell:first-child { border-top: none; }
     .work-grid, .ads-grid, .ind-grid { grid-template-columns: 1fr; }
     .steps-row { grid-template-columns: 1fr; }
+    .steps-row.cols-5 { grid-template-columns: 1fr; }
     .step { border-left: none; border-top: 1px solid var(--border); }
     .step:first-child { border-top: none; }
     .footer-links { display: none; }
@@ -526,8 +549,8 @@
   <ul class="nav-links">
     <li><a href="#home" data-page="home" class="nav-link active">Home</a></li>
     <li><a href="#work" data-page="work" class="nav-link">Work</a></li>
-    <li><a href="#expertise" data-page="expertise" class="nav-link">Expertise</a></li>
-    <li><a href="#book" data-book class="nav-link nav-cta">Book a Call</a></li>
+    <li><a href="#expertise" data-page="expertise" class="nav-link">Approach</a></li>
+    <li><a href="#book" data-book class="nav-link nav-cta">Let's Talk</a></li>
   </ul>
   <div class="nav-right">
     <span class="avail-pill"><span class="avail-pip"></span>Available for projects</span>
@@ -546,17 +569,17 @@
   <section class="hero">
     <div class="hero-grid">
       <div>
-        <div class="hero-eyebrow">Brand &middot; Web &middot; Growth Systems</div>
-        <h1 class="hero-h1">Agency-grade work,<br/>built for <span class="accent">local businesses.</span></h1>
+        <div class="hero-eyebrow">Strategy &middot; Content &middot; Digital Systems</div>
+        <h1 class="hero-h1">I help organizations turn what they know<br/>into what their audience <span class="accent">needs to understand.</span></h1>
         <p class="hero-sub">
-          I design the websites, visuals, and back-end systems that let small and medium businesses look, run, and compete like a much larger brand, without hiring a full agency to get there.
+          I research the problem, find the story and strategy that actually matters, then build the content, creative, and digital systems to communicate it, and get it in front of the right people.
         </p>
         <div class="hero-actions">
           <a href="#book" class="btn-primary" data-book>
-            <span>Book a Free Call</span>
+            <span>Have a Problem Worth Solving?</span>
             <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg>
           </a>
-          <a href="#work" class="btn-outline" data-page="work">See My Work</a>
+          <a href="#work" class="btn-outline" data-page="work">See the Work</a>
         </div>
         <div class="hero-stats">
           <div>
@@ -568,8 +591,8 @@
             <div class="h-stat-sub">First delivery</div>
           </div>
           <div>
-            <div class="h-stat-num" data-count="3">0</div>
-            <div class="h-stat-sub">Core industries</div>
+            <div class="h-stat-num" style="font-size:1.4rem;">Research<br/>to Launch</div>
+            <div class="h-stat-sub">One person, every stage</div>
           </div>
         </div>
         <div class="hero-socials" style="margin-top:32px;">
@@ -594,7 +617,7 @@
         </div>
         <div>
           <div class="hero-photo-name">Pritam Laskar</div>
-          <div class="hero-photo-role">Brand &amp; Web Systems</div>
+          <div class="hero-photo-role">Strategy, Content &amp; Digital Systems</div>
         </div>
       </div>
     </div>
@@ -603,8 +626,8 @@
   <!-- MARQUEE -->
   <div class="marquee">
     <div class="marquee-track">
-      <span class="m-item">Website Design</span><span class="m-item">Brand Systems</span><span class="m-item">AI Visual Production</span><span class="m-item">Automation &amp; CRM</span><span class="m-item">Campaign Design</span><span class="m-item">Local SEO</span><span class="m-item">E-Commerce</span><span class="m-item">Landing Pages</span>
-      <span class="m-item">Website Design</span><span class="m-item">Brand Systems</span><span class="m-item">AI Visual Production</span><span class="m-item">Automation &amp; CRM</span><span class="m-item">Campaign Design</span><span class="m-item">Local SEO</span><span class="m-item">E-Commerce</span><span class="m-item">Landing Pages</span>
+      <span class="m-item">Strategy &amp; Positioning</span><span class="m-item">Audience Research</span><span class="m-item">Content &amp; Storytelling</span><span class="m-item">Brand &amp; Web Design</span><span class="m-item">Data-Led Campaigns</span><span class="m-item">AI-Assisted Production</span><span class="m-item">Workflow Automation</span><span class="m-item">Digital Systems</span>
+      <span class="m-item">Strategy &amp; Positioning</span><span class="m-item">Audience Research</span><span class="m-item">Content &amp; Storytelling</span><span class="m-item">Brand &amp; Web Design</span><span class="m-item">Data-Led Campaigns</span><span class="m-item">AI-Assisted Production</span><span class="m-item">Workflow Automation</span><span class="m-item">Digital Systems</span>
     </div>
   </div>
 
@@ -614,7 +637,6 @@
       <div class="logo-strip-label">Previously At</div>
       <div class="logo-strip-logos">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxtsu2nlWxrAXIonL_rdY28NR6bhf7X8o2kezyAFKSg&s=10" alt="Tesco Ireland" onerror="this.style.display='none';" />
-        <img src="https://pbs.twimg.com/profile_images/986106348688453634/ixGrpkE8_400x400.jpg" alt="Crimson Education" onerror="this.style.display='none';" />
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2DiurghSQlQPlagz_8WuNNNkN0Y-l6Vbf6wq65Ace1g&s=10" alt="Centra Ireland" onerror="this.style.display='none';" />
         <img src="https://flagcdn.com/w320/un.png" alt="United Nations" onerror="this.style.display='none';" />
       </div>
@@ -626,15 +648,11 @@
     <div class="stats-band-inner">
       <div class="stat-cell">
         <div class="stat-big"><span class="accent" data-count="20">0</span>+</div>
-        <div class="stat-desc">Projects completed for small businesses and startups</div>
+        <div class="stat-desc">Projects completed across strategy, content, creative, and systems</div>
       </div>
       <div class="stat-cell">
         <div class="stat-big"><span class="accent">48</span>hr</div>
         <div class="stat-desc">First deliverable turnaround on every project</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-big"><span class="accent" data-count="3">0</span></div>
-        <div class="stat-desc">Core industries, gone deep instead of spread thin</div>
       </div>
     </div>
   </div>
@@ -646,10 +664,10 @@
         <div class="label reveal">About Me</div>
         <h2 class="section-h reveal d1" style="margin-top:14px;">I solve the problem<br/>behind the problem.</h2>
         <p class="about-p reveal d2" style="margin-top:22px;">
-          Most people come to me thinking they need a website or a few nice images. What they actually need is a brand that runs itself while they focus on the business. I'm Pritam, and I fix that gap.
+          Most people come to me thinking they need a website, a campaign, or a few nice visuals. What they usually need first is clarity, on what they're actually trying to say, to whom, and why it matters. I'm Pritam. I research the problem, build the strategy, and then execute it.
         </p>
         <p class="about-p reveal d3">
-          I listen first, then build the pipelines, workflows, and visuals that quietly solve it. AI brand imagery, automation, CRM integration, and a digital presence, all connected, so nothing depends on you remembering to do it.
+          My background is unusually cross-functional by design: an MSc in Information Systems from University College Dublin, digital media production with the United Nations, digital operations at Tesco Ireland, and data engineering and automation in my current work, alongside independent work in brand strategy, content, and web. That combination is the point, I can sit in the data and the systems, and in the story and the creative, at the same time.
         </p>
         <a href="https://www.behance.net/pritamlaskar2" class="about-link reveal d4" target="_blank" rel="noopener">
           See my portfolio on Behance
@@ -661,16 +679,16 @@
         <div class="reveal d1">
           <div class="sk-label">Core Skills</div>
           <div class="chips">
-            <span class="chip">AI Brand Visuals</span>
-            <span class="chip">Website Design</span>
-            <span class="chip">Visual Identity</span>
-            <span class="chip">Brand Strategy</span>
-            <span class="chip">Landing Pages</span>
-            <span class="chip">Product Imagery</span>
-            <span class="chip">Process Automation</span>
-            <span class="chip">CRM Integration</span>
-            <span class="chip">On-Page SEO</span>
-            <span class="chip">Launch Campaigns</span>
+            <span class="chip">Audience &amp; Market Research</span>
+            <span class="chip">Positioning &amp; Messaging</span>
+            <span class="chip">Data-Led Storytelling</span>
+            <span class="chip">Content Strategy</span>
+            <span class="chip">Brand &amp; Visual Identity</span>
+            <span class="chip">Website &amp; Landing Pages</span>
+            <span class="chip">AI-Assisted Creative</span>
+            <span class="chip">Workflow Automation</span>
+            <span class="chip">CRM &amp; Data Systems</span>
+            <span class="chip">Python &amp; SQL</span>
           </div>
         </div>
         <div class="reveal d2">
@@ -690,38 +708,154 @@
     </div>
   </section>
 
+  <!-- WHAT I ACTUALLY DO -->
+  <section class="section section-alt">
+    <div class="section-head reveal">
+      <div class="label">What I Actually Do</div>
+      <h2 class="section-h">Strategy first. Execution follows.</h2>
+      <p class="section-sub">My value isn't that I can produce assets. It's that I can understand a problem, find the story that matters, build the strategy around it, and then actually execute the content, creative, and systems needed to communicate and distribute it.</p>
+    </div>
+    <div class="steps-row cols-5 reveal d1">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-t">Understand</div>
+        <div class="step-d">Research the organization, audience, market, data, and the problem underneath the brief.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-t">Position</div>
+        <div class="step-d">Clarify what matters, who it matters to, and why they should care.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-t">Communicate</div>
+        <div class="step-d">Turn that thinking into content, storytelling, creative, and digital experiences.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-t">Systemize</div>
+        <div class="step-d">Build the repeatable workflows, automation, and distribution around the work.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">05</div>
+        <div class="step-t">Measure</div>
+        <div class="step-d">Use data and feedback to improve what's working, and drop what isn't.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS I SOLVE -->
+  <section class="section">
+    <div class="section-head reveal">
+      <div class="label">Problems I Solve</div>
+      <h2 class="section-h">If any of this sounds familiar,<br/>that's usually where I come in.</h2>
+      <p class="section-sub">I work best with mission-driven organizations, growing businesses, and founders who have something real to say but are struggling to make it land.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal">
+        <div class="ind-index">01</div>
+        <div class="ind-name">"We have strong work, but our audience doesn't understand its value."</div>
+        <div class="ind-p">I research how your audience actually thinks and reframe the message around what they need to hear, not just what you want to say.</div>
+      </div>
+      <div class="ind-card reveal d1">
+        <div class="ind-index">02</div>
+        <div class="ind-name">"We have data and research, but don't know how to turn it into content."</div>
+        <div class="ind-p">I turn evidence into stories people actually read, using data-led narratives instead of raw numbers or generic copy.</div>
+      </div>
+      <div class="ind-card reveal d2">
+        <div class="ind-index">03</div>
+        <div class="ind-name">"Our content is inconsistent and disconnected from our goals."</div>
+        <div class="ind-p">I build a content strategy tied to a business outcome, then a system that keeps producing against it.</div>
+      </div>
+      <div class="ind-card reveal">
+        <div class="ind-index">04</div>
+        <div class="ind-name">"We need to reach a specific buyer or decision-maker."</div>
+        <div class="ind-p">I research who that decision-maker actually is and build campaigns that speak to their specific problem, not a general audience.</div>
+      </div>
+      <div class="ind-card reveal d1">
+        <div class="ind-index">05</div>
+        <div class="ind-name">"Our digital presence doesn't reflect the quality of our organization."</div>
+        <div class="ind-p">I design and build the website, brand, and creative that finally matches the caliber of the work you do.</div>
+      </div>
+      <div class="ind-card reveal d2">
+        <div class="ind-index">06</div>
+        <div class="ind-name">"Our internal processes are too manual to scale."</div>
+        <div class="ind-p">I build the AI workflows and automation that let a small team produce and distribute like a much bigger one.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- WORK PREVIEW -->
   <section class="section section-alt">
     <div class="section-head row reveal">
       <div>
         <div class="label">Selected Work</div>
-        <h2 class="section-h">A few recent builds.</h2>
+        <h2 class="section-h">Strategy in practice.</h2>
       </div>
       <a href="#work" data-page="work" class="btn-link">
         See All Work
         <svg viewBox="0 0 16 16"><path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
       </a>
     </div>
+    <!-- FEATURED CASE STUDY: OKLAHOMA / SAGA -->
+    <div class="case-block reveal" style="margin-bottom:22px;">
+      <div class="case-top">
+        <div class="case-tag">Featured Strategic Project</div>
+        <div class="case-title">Oklahoma Targeted Campaign — Strategic Content Concept</div>
+        <p class="case-note">A self-directed strategic concept built around Saga Education, a nonprofit that partners with school districts on high-impact tutoring. Saga did not commission this campaign; it's shown here as evidence of how I think about buyer-specific, evidence-led communication for mission-driven organizations.</p>
+      </div>
+      <div class="case-grid">
+        <div class="case-cell">
+          <div class="case-label">The Problem</div>
+          <div class="case-p">Nonprofits like Saga sell into school districts, where the real buyer is a superintendent or administrator, not a general audience, and generic social content rarely reaches or moves them.</div>
+        </div>
+        <div class="case-cell">
+          <div class="case-label">The Audience</div>
+          <div class="case-p">Oklahoma district-level decision-makers weighing tutoring investments against measurable learning-loss and staffing pressures in their own schools.</div>
+        </div>
+        <div class="case-cell">
+          <div class="case-label">The Insight</div>
+          <div class="case-p">Oklahoma's specific education conditions, and the district-level problems they create, needed to be named explicitly before Saga's solution would feel relevant instead of generic.</div>
+        </div>
+        <div class="case-cell">
+          <div class="case-label">The Strategy</div>
+          <div class="case-p">Research state-level education data first, then structure the campaign as a deliberate progression: <strong>problem → evidence → solution</strong>, mapped to what a district decision-maker actually weighs.</div>
+        </div>
+        <div class="case-cell">
+          <div class="case-label">The Execution</div>
+          <div class="case-p">A 10-card LinkedIn carousel connecting Oklahoma-specific education data to district-level problems, then to Saga's tutoring model, card by card.</div>
+        </div>
+        <div class="case-cell">
+          <div class="case-label">The Outcome</div>
+          <div class="case-p">A reusable buyer-specific campaign framework, proof of research-led, evidence-first content for a mission-driven, trust-sensitive audience.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-subhead reveal" style="margin-top:40px;">
+      <h3>My Previous Work</h3>
+      <p>Brand and web builds, shown as proof of execution, not part of the Oklahoma case study above.</p>
+    </div>
     <div class="preview-slider-wrap">
       <div class="preview-slider reveal" id="workSlider">
         <div class="preview-card">
           <img src="assets/work/blue-star.png" alt="Blue Star Donuts and Coffee website" />
           <div class="preview-card-body">
-            <div class="preview-cat">E-Commerce &middot; Food &amp; Beverage</div>
+            <div class="preview-cat">Brand &amp; Website</div>
             <div class="preview-title">Blue Star Donuts + Coffee</div>
           </div>
         </div>
         <div class="preview-card">
           <img src="assets/work/dolphin-property.png" alt="Dolphin Property Services website" />
           <div class="preview-card-body">
-            <div class="preview-cat">Real Estate &middot; Property Management</div>
+            <div class="preview-cat">Trust-First Digital Presence</div>
             <div class="preview-title">Dolphin Property Services</div>
           </div>
         </div>
         <div class="preview-card">
           <img src="assets/work/aeris-climate.jpeg" alt="Aeris Climate Systems website" />
           <div class="preview-card-body">
-            <div class="preview-cat">Industrial &middot; B2B</div>
+            <div class="preview-cat">Technical B2B Positioning</div>
             <div class="preview-title">Aeris Climate Systems</div>
           </div>
         </div>
@@ -729,39 +863,39 @@
     </div>
     <div class="section-cta-row reveal" style="text-align:center;">
       <a href="#work" data-page="work" class="btn-primary" style="margin-top:36px;">
-        <span>See My Work</span>
+        <span>See the Full Portfolio</span>
         <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg>
       </a>
     </div>
   </section>
 
-  <!-- EXPERTISE PREVIEW -->
+  <!-- APPROACH PREVIEW -->
   <section class="section">
     <div class="section-head reveal">
-      <div class="label">Expertise</div>
-      <h2 class="section-h">Why hire me over an agency?</h2>
-      <p class="section-sub">I chose three industries and went deep instead of spreading thin across twenty. That focus is what makes the work land.</p>
+      <div class="label">Why This, Not an Agency or a Freelancer</div>
+      <h2 class="section-h">Thinking and execution, in one person.</h2>
+      <p class="section-sub">Most agencies hand you a strategist you never talk to again once the deck is done. Most freelancers can execute one thing well. I stay in the work from research through to the system that keeps it running.</p>
     </div>
     <div class="expertise-teaser-grid">
       <div class="et-card reveal d1">
         <div class="et-index">01</div>
-        <div class="et-h">Deep Industry Specialization</div>
-        <div class="et-p">Industrial &amp; B2B, real estate, and hospitality &amp; food. Three industries, chosen deliberately, so I go deep instead of spreading thin.</div>
+        <div class="et-h">Research Before Creative</div>
+        <div class="et-p">I don't start with a mood board. I start by understanding your audience, your data, and the problem you're actually trying to solve.</div>
       </div>
       <div class="et-card reveal d2">
         <div class="et-index">02</div>
         <div class="et-h">Systems, Not Just Assets</div>
-        <div class="et-p">A logo and a website aren't the finish line. I build the automation and CRM underneath so the brand keeps running without you.</div>
+        <div class="et-p">A logo, a deck, or a website isn't the finish line. I build the workflows and automation underneath so the work keeps running without you.</div>
       </div>
       <div class="et-card reveal d3">
         <div class="et-index">03</div>
-        <div class="et-h">AI-Accelerated Production</div>
-        <div class="et-p">Agency-quality visuals and copy, produced in 48 hours instead of 4 weeks, without cutting the strategy that makes them work.</div>
+        <div class="et-h">AI as an Accelerant, Not the Product</div>
+        <div class="et-p">AI helps me research faster, explore more ideas, and produce efficiently. The judgment, strategy, and storytelling stay human, mine.</div>
       </div>
     </div>
     <div class="section-cta-row reveal" style="text-align:center;">
       <a href="#expertise" data-page="expertise" class="btn-primary" style="margin-top:36px;">
-        <span>See My Expertise</span>
+        <span>See How I Work</span>
         <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg>
       </a>
     </div>
@@ -854,12 +988,12 @@
   <div class="cta-banner">
     <div class="cta-inner">
       <div class="reveal">
-        <div class="cta-eyebrow">Ready to start?</div>
-        <div class="cta-h">Your digital presence<br/>should be working for you.</div>
+        <div class="cta-eyebrow">Have a problem worth solving?</div>
+        <div class="cta-h">Let's figure out what you're<br/>actually trying to say.</div>
       </div>
       <div class="cta-actions reveal d2">
         <a href="#book" class="btn-white" data-book>Book a Free 15-min Call</a>
-        <a href="#work" data-page="work" class="btn-ghost-inv">See My Work</a>
+        <a href="#work" data-page="work" class="btn-ghost-inv">See the Work</a>
       </div>
     </div>
   </div>
@@ -869,8 +1003,8 @@
     <div class="book-inner">
       <div class="reveal">
         <div class="label" style="justify-content:center;">Let's Talk</div>
-        <h2 class="section-h">Book a Free 15-Minute Call</h2>
-        <p class="book-sub">No pitch. No pressure. Just a quick, honest conversation about your business and whether I can help. Pick a time that works for you.</p>
+        <h2 class="section-h">Have a Problem Worth Solving?</h2>
+        <p class="book-sub">No pitch. No pressure. Just a quick, honest conversation about what you're trying to communicate and whether I'm the right person to help. Pick a time that works for you.</p>
       </div>
       <div class="cal-wrap reveal d1">
         <div class="calendly-inline-widget" data-url="https://calendly.com/itspmlaskar/get-to-know-call?hide_gdpr_banner=1" style="min-width:320px; height:700px;"></div>
@@ -889,22 +1023,62 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="label reveal">Selected Work</div>
-      <h1 class="page-hero-h reveal d1">Websites, product design,<br/>and campaigns built for real businesses.</h1>
-      <p class="page-hero-sub reveal d2">From property management firms to local diners, every project starts with the same question: what does this business actually need to look credible online? Here's a sample of the answers.</p>
+      <h1 class="page-hero-h reveal d1">Strategy, content, and creative,<br/>built to solve a real problem.</h1>
+      <p class="page-hero-sub reveal d2">Every project starts with the same question: what does this audience actually need to understand, trust, or act on? Here's a sample of the answers, strategic campaigns, brand and web builds, and the creative that proves I can execute.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="work-block">
       <div class="work-subhead reveal">
+        <h3>Strategic Campaigns</h3>
+        <p>Research-led campaigns built around a specific audience and a specific problem.</p>
+      </div>
+      <div class="case-block reveal" style="margin-bottom:0;">
+        <div class="case-top">
+          <div class="case-tag">Featured Strategic Project</div>
+          <div class="case-title">Oklahoma Targeted Campaign — Strategic Content Concept</div>
+          <p class="case-note">A self-directed strategic concept built around Saga Education, a nonprofit that partners with school districts on high-impact tutoring. Saga did not commission this campaign; it's shown here as evidence of how I think about buyer-specific, evidence-led communication for mission-driven organizations.</p>
+        </div>
+        <div class="case-grid">
+          <div class="case-cell">
+            <div class="case-label">The Problem</div>
+            <div class="case-p">Nonprofits like Saga sell into school districts, where the real buyer is a superintendent or administrator, not a general audience, and generic social content rarely reaches or moves them.</div>
+          </div>
+          <div class="case-cell">
+            <div class="case-label">The Audience</div>
+            <div class="case-p">Oklahoma district-level decision-makers weighing tutoring investments against measurable learning-loss and staffing pressures in their own schools.</div>
+          </div>
+          <div class="case-cell">
+            <div class="case-label">The Insight</div>
+            <div class="case-p">Oklahoma's specific education conditions, and the district-level problems they create, needed to be named explicitly before Saga's solution would feel relevant instead of generic.</div>
+          </div>
+          <div class="case-cell">
+            <div class="case-label">The Strategy</div>
+            <div class="case-p">Research state-level education data first, then structure the campaign as a deliberate progression: <strong>problem → evidence → solution</strong>, mapped to what a district decision-maker actually weighs.</div>
+          </div>
+          <div class="case-cell">
+            <div class="case-label">The Execution</div>
+            <div class="case-p">A 10-card LinkedIn carousel connecting Oklahoma-specific education data to district-level problems, then to Saga's tutoring model, card by card.</div>
+          </div>
+          <div class="case-cell">
+            <div class="case-label">The Outcome</div>
+            <div class="case-p">A reusable buyer-specific campaign framework, proof of research-led, evidence-first content for a mission-driven, trust-sensitive audience.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-block">
+      <div class="work-subhead reveal">
         <h3>Websites &amp; Digital Products</h3>
-        <p>Full sites designed and built end to end, structure, copy direction, and visuals.</p>
+        <p>Full sites designed and built end to end, structure, copy direction, and visuals, proof of execution.</p>
       </div>
       <div class="work-grid">
         <div class="work-card landscape reveal">
           <img src="assets/work/blue-star.png" alt="Blue Star Donuts and Coffee website" />
           <div class="work-card-body">
-            <div class="work-cat">E-Commerce &middot; Food &amp; Beverage</div>
+            <div class="work-cat">Brand &amp; Website</div>
             <div class="work-title">Blue Star Donuts + Coffee</div>
             <div class="work-desc">A playful, image-forward storefront built to make an everyday product feel like an occasion.</div>
           </div>
@@ -912,7 +1086,7 @@
         <div class="work-card landscape reveal d1">
           <img src="assets/work/dolphin-property.png" alt="Dolphin Property Services website" />
           <div class="work-card-body">
-            <div class="work-cat">Real Estate &middot; Property Management</div>
+            <div class="work-cat">Trust-First Positioning</div>
             <div class="work-title">Dolphin Property Services</div>
             <div class="work-desc">A trust-first site for an affordable housing and senior living operator across the NY metro area.</div>
           </div>
@@ -920,15 +1094,15 @@
         <div class="work-card landscape reveal d2">
           <img src="assets/work/reliance-property.png" alt="Reliance Property Services website" />
           <div class="work-card-body">
-            <div class="work-cat">Real Estate &middot; B2B Services</div>
+            <div class="work-cat">B2B Platform Positioning</div>
             <div class="work-title">Reliance Property Services</div>
-            <div class="work-desc">A national property services platform positioned for scale, servicing investors and asset managers.</div>
+            <div class="work-desc">A national services platform positioned for scale, servicing investors and asset managers.</div>
           </div>
         </div>
         <div class="work-card landscape reveal">
           <img src="assets/work/vacation-steal.png" alt="Vacation Steal travel deals website" />
           <div class="work-card-body">
-            <div class="work-cat">Travel &middot; E-Commerce</div>
+            <div class="work-cat">Conversion-Led Design</div>
             <div class="work-title">Vacation Steal</div>
             <div class="work-desc">A high-energy deals marketplace built to move browsers into bookings fast.</div>
           </div>
@@ -936,7 +1110,7 @@
         <div class="work-card landscape reveal d1">
           <img src="assets/work/aeris-climate.jpeg" alt="Aeris Climate Systems website" />
           <div class="work-card-body">
-            <div class="work-cat">Industrial &middot; B2B</div>
+            <div class="work-cat">Technical B2B Positioning</div>
             <div class="work-title">Aeris Climate Systems</div>
             <div class="work-desc">A technical, confidence-first site for a commercial HVAC and climate infrastructure provider.</div>
           </div>
@@ -944,7 +1118,7 @@
         <div class="work-card landscape reveal d2">
           <img src="assets/work/maple-road-diner.jpeg" alt="The Maple Road Diner website" />
           <div class="work-card-body">
-            <div class="work-cat">Restaurant &middot; Hospitality</div>
+            <div class="work-cat">Community-First Brand</div>
             <div class="work-title">The Maple Road Diner</div>
             <div class="work-desc">A warm, community-first site built around the feeling of a regular's breakfast spot.</div>
           </div>
@@ -1008,49 +1182,34 @@
 
   <div class="page-hero">
     <div class="page-hero-inner">
-      <div class="label reveal">Expertise</div>
-      <h1 class="page-hero-h reveal d1">One person. Every discipline<br/>your brand actually needs.</h1>
-      <p class="page-hero-sub reveal d2">Most freelancers spread themselves across every industry and hope it's enough. I chose three, industrial and B2B, real estate, and hospitality and food, and went deep on each one, then built the systems to deliver it without agency overhead.</p>
+      <div class="label reveal">Approach</div>
+      <h1 class="page-hero-h reveal d1">One person, every stage,<br/>from research to a running system.</h1>
+      <p class="page-hero-sub reveal d2">Most agencies split the work across a strategist, a writer, a designer, and a developer, and you feel the handoffs. Most freelancers cover one of those disciplines well. I stay in the work end to end, so the strategy actually survives into what gets built.</p>
     </div>
   </div>
 
-  <!-- INDUSTRIES -->
+  <!-- WHO I WORK WITH -->
   <section class="section">
     <div class="section-head reveal">
-      <div class="label">Industries I Build For</div>
-      <h2 class="section-h">Three industries.<br/>Mastered, not sampled.</h2>
-      <p class="section-sub">I turned down going broad on purpose. Specializing in three industries means I already know the objections, the buyers, and what actually converts, before we even talk.</p>
+      <div class="label">Who I Work Best With</div>
+      <h2 class="section-h">Organizations with something<br/>real to say.</h2>
+      <p class="section-sub">I'm not a generalist for hire, and I'm not a nonprofit-only consultant. I'm strongest with organizations that have something meaningful to communicate but are struggling to make it land.</p>
     </div>
     <div class="ind-grid">
       <div class="ind-card reveal">
         <div class="ind-index">01</div>
-        <div class="ind-name">Industrial &amp; B2B Services</div>
-        <div class="ind-p">HVAC and climate infrastructure, manufacturing, logistics, and specialized equipment providers. Technical, confidence-first sites that make a complex service easy to trust at first glance, built for buyers who are evaluating vendors, not browsing casually.</div>
-        <div class="chips" style="margin-top:18px; margin-bottom:0;">
-          <span class="chip">Climate &amp; HVAC</span>
-          <span class="chip">Manufacturing</span>
-          <span class="chip">Logistics</span>
-        </div>
+        <div class="ind-name">Mission-Driven Organizations</div>
+        <div class="ind-p">Nonprofits, education organizations, and social-impact organizations, where trust, evidence, outcomes, and human stories matter more than a clever tagline.</div>
       </div>
       <div class="ind-card reveal d1">
         <div class="ind-index">02</div>
-        <div class="ind-name">Real Estate &amp; Property</div>
-        <div class="ind-p">Property management firms, residential portfolios, and investor-facing platforms. Credibility-first structure built for tenants, asset managers, and investors, designed to scale as the portfolio grows instead of needing a rebuild.</div>
-        <div class="chips" style="margin-top:18px; margin-bottom:0;">
-          <span class="chip">Property Management</span>
-          <span class="chip">Residential Portfolios</span>
-          <span class="chip">Investor Platforms</span>
-        </div>
+        <div class="ind-name">Growing Businesses</div>
+        <div class="ind-p">Companies that need stronger positioning, digital presence, content, and systems, but don't need, or want to pay for, a large agency to get there.</div>
       </div>
       <div class="ind-card reveal d2">
         <div class="ind-index">03</div>
-        <div class="ind-name">Hospitality &amp; Food</div>
-        <div class="ind-p">Hotels, restaurants, cafes, and travel operators. Appetite and trust-driven visuals with a booking or ordering path that competes directly with the big listing platforms instead of losing traffic to them.</div>
-        <div class="chips" style="margin-top:18px; margin-bottom:0;">
-          <span class="chip">Hotels &amp; Lodging</span>
-          <span class="chip">Restaurants &amp; Cafes</span>
-          <span class="chip">Travel</span>
-        </div>
+        <div class="ind-name">Founders With Complex Offerings</div>
+        <div class="ind-p">Organizations that struggle to clearly say what they do, why it matters, who it's for, and what evidence backs the claim, and need help turning that into a clear digital strategy.</div>
       </div>
     </div>
   </section>
@@ -1063,24 +1222,24 @@
     </div>
     <div class="steps-row">
       <div class="step reveal">
-        <div class="step-n">01 &middot; Discover</div>
+        <div class="step-n">01 &middot; Research</div>
         <div class="step-t">Book a Free Call</div>
-        <div class="step-d">We spend 15 minutes on your business, your goals, and what is slowing you down. No pitch. No pressure.</div>
+        <div class="step-d">We spend 15 minutes on the problem, the audience, and what's actually stopping the message from landing. No pitch. No pressure.</div>
       </div>
       <div class="step reveal d1">
-        <div class="step-n">02 &middot; Scope</div>
+        <div class="step-n">02 &middot; Strategy</div>
         <div class="step-t">I Scope the Work</div>
-        <div class="step-d">I map out exactly what to build, website, workflow, content stack, and confirm everything before I start.</div>
+        <div class="step-d">I map the positioning, the content plan, and the systems needed, and confirm everything before I start.</div>
       </div>
       <div class="step reveal d2">
-        <div class="step-n">03 &middot; Build</div>
+        <div class="step-n">03 &middot; Build &amp; Launch</div>
         <div class="step-t">Delivered in 48 to 72hrs</div>
         <div class="step-d">First deliverable lands fast. You review, I refine within your included revision rounds. Then we ship.</div>
       </div>
       <div class="step reveal d3">
-        <div class="step-n">04 &middot; Run</div>
+        <div class="step-n">04 &middot; Improve</div>
         <div class="step-t">Runs Every Month</div>
-        <div class="step-d">Monthly clients get fresh content, maintained automations, and priority support. Hands-free.</div>
+        <div class="step-d">Ongoing clients get fresh content, maintained systems, and results reviewed against what's actually working.</div>
       </div>
     </div>
   </section>
@@ -1088,59 +1247,59 @@
   <!-- SERVICES -->
   <section class="section svc-section">
     <div class="section-head reveal">
-      <div class="label label-inv">Ways We Can Work Together</div>
-      <h2 class="section-h" style="color:#fff;">Tell me what's broken.<br/>I'll tell you what fixes it.</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,0.4);">Every business needs a different amount of help. Here's how people usually start, and where it tends to go from there.</p>
+      <div class="label label-inv">How the Work Is Grouped</div>
+      <h2 class="section-h" style="color:#fff;">Strategy first.<br/>Execution follows from it.</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.4);">I don't sell a menu of disconnected services. Everything below sits under one of four areas, and most engagements start with the first one.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card reveal">
         <div class="svc-index">01</div>
-        <div class="svc-outcome">Your feed looks tired and you know it</div>
-        <h3>AI Visual Pack</h3>
-        <p>10 campaign-quality AI brand images delivered in 48 hours. Product shots, lifestyle visuals, or launch assets built around your brand.</p>
-        <div class="svc-tags"><span class="svc-tag">10 images</span><span class="svc-tag">Product shots</span><span class="svc-tag">Commercial use</span><span class="svc-tag">48hr delivery</span></div>
-        <a href="#book" class="svc-cta" data-book>Start with a visual pack <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></a>
+        <div class="svc-outcome">Strategy &amp; Positioning</div>
+        <h3>Understand the problem before touching execution</h3>
+        <p>Audience and market research, content strategy, brand positioning, messaging, and campaign strategy, the thinking every deliverable below is built on.</p>
+        <div class="svc-tags"><span class="svc-tag">Audience research</span><span class="svc-tag">Market research</span><span class="svc-tag">Messaging</span><span class="svc-tag">Campaign strategy</span></div>
+        <a href="#book" class="svc-cta" data-book>Start with the strategy <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></a>
       </div>
       <div class="svc-card reveal d1">
         <div class="svc-index">02</div>
-        <div class="svc-outcome">You have one thing that needs to just get done</div>
-        <h3>One-Time Project</h3>
-        <p>A single scoped deliverable. A campaign visual set, a landing page, a brand strategy doc, or an automation build.</p>
-        <div class="svc-tags"><span class="svc-tag">Landing page</span><span class="svc-tag">Brand strategy</span><span class="svc-tag">Automation build</span></div>
-        <a href="#book" class="svc-cta" data-book>Scope a project <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></a>
+        <div class="svc-outcome">Content &amp; Storytelling</div>
+        <h3>Turn the strategy into what people actually read</h3>
+        <p>LinkedIn and social campaigns, data-led storytelling, thought leadership, founder content, educational content, and impact storytelling.</p>
+        <div class="svc-tags"><span class="svc-tag">LinkedIn content</span><span class="svc-tag">Data-led storytelling</span><span class="svc-tag">Impact storytelling</span></div>
+        <a href="#book" class="svc-cta" data-book>Build the content system <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></a>
       </div>
       <div class="svc-card reveal">
         <div class="svc-index">03</div>
-        <div class="svc-outcome">You keep meaning to update your brand and never get to it</div>
-        <h3>Brand Presence Retainer</h3>
-        <p>Website management, Google presence, a steady flow of AI brand images, and monthly strategy, running in the background.</p>
-        <div class="svc-tags"><span class="svc-tag">Monthly AI images</span><span class="svc-tag">Website management</span><span class="svc-tag">SEO updates</span></div>
-        <a href="#book" class="svc-cta" data-book>Hand it off monthly <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></a>
+        <div class="svc-outcome">Creative &amp; Digital</div>
+        <h3>Give the strategy a face and a place to live</h3>
+        <p>Brand identity, websites, landing pages, visual campaigns, video, and AI-assisted creative, the execution that proves the thinking holds up.</p>
+        <div class="svc-tags"><span class="svc-tag">Brand identity</span><span class="svc-tag">Websites &amp; landing pages</span><span class="svc-tag">AI-assisted creative</span></div>
+        <a href="#book" class="svc-cta" data-book>See the creative work <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></a>
       </div>
       <div class="svc-card reveal d1">
         <div class="svc-index">04</div>
-        <div class="svc-outcome">You're doing manually what software should be doing for you</div>
-        <h3>Automation and Systems</h3>
-        <p>End-to-end workflow automation, built and maintained monthly. Lead capture, CRM integration, AI pipelines, follow-up sequences.</p>
-        <div class="svc-tags"><span class="svc-tag">CRM integration</span><span class="svc-tag">Lead capture</span><span class="svc-tag">AI pipelines</span></div>
+        <div class="svc-outcome">Systems &amp; Automation</div>
+        <h3>Make the work repeatable, not one-off</h3>
+        <p>AI workflows, n8n automation, content and data workflows, and CRM or process automation, so distribution doesn't depend on someone remembering to do it.</p>
+        <div class="svc-tags"><span class="svc-tag">n8n automation</span><span class="svc-tag">CRM &amp; process automation</span><span class="svc-tag">Data workflows</span></div>
         <a href="#book" class="svc-cta" data-book>Automate the busywork <svg viewBox="0 0 16 16"><path d="M3 8a.5.5 0 0 1 .5-.5h7.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H3.5A.5.5 0 0 1 3 8z"/></svg></a>
       </div>
       <div class="svc-card bundle reveal d2">
         <div class="bundle-row">
           <div>
             <div class="svc-index">05</div>
-            <div class="svc-outcome">You're stitching together a designer, a strategist, and an ops contractor</div>
-            <h3 style="font-size:1.2rem;">Full Brand Management</h3>
-            <p style="max-width:520px;">The complete package. AI visuals, website, Google presence, brand strategy, automation workflows, CRM, and ongoing maintenance.</p>
+            <div class="svc-outcome">You're stitching together a strategist, a writer, a designer, and an ops contractor</div>
+            <h3 style="font-size:1.2rem;">End-to-End Engagement</h3>
+            <p style="max-width:520px;">Strategy and positioning, content and storytelling, creative and digital, and the systems to run it, held together by one person who understands the whole thing.</p>
             <div class="bundle-items">
-              <span class="b-item">Monthly AI visual pack</span>
-              <span class="b-item">Website and Google presence management</span>
-              <span class="b-item">Brand strategy and positioning</span>
-              <span class="b-item">Automation and CRM workflows</span>
+              <span class="b-item">Research, positioning &amp; messaging</span>
+              <span class="b-item">Content system &amp; storytelling</span>
+              <span class="b-item">Brand, website &amp; creative</span>
+              <span class="b-item">Automation &amp; distribution systems</span>
             </div>
           </div>
           <div style="text-align:right; flex-shrink:0;">
-            <span class="bundle-note">One person, one retainer, nothing falling through the cracks.</span>
+            <span class="bundle-note">One person, one thread of thinking, nothing lost in translation.</span>
             <a href="#book" class="btn-bundle" data-book>Let's Talk</a>
           </div>
         </div>
@@ -1150,7 +1309,7 @@
           <div>
             <div class="custom-label">Custom Engagement</div>
             <div class="custom-h">Something specific in mind? Let's build it together.</div>
-            <p class="custom-p">Not every business fits a template. Book a call and we'll map out exactly what you need.</p>
+            <p class="custom-p">Not every organization fits a template. Book a call and we'll map out exactly what you need.</p>
           </div>
           <a href="#book" class="btn-custom" data-book>Start a Conversation</a>
         </div>
@@ -1163,7 +1322,7 @@
     <div class="section-head reveal">
       <div class="label">The Difference</div>
       <h2 class="section-h">Why this beats the alternatives.</h2>
-      <p class="section-sub">You have three real options when your brand needs work. Here's how they actually compare.</p>
+      <p class="section-sub">You have three real options when you need to fix how your organization communicates. Here's how they actually compare.</p>
     </div>
     <div class="moat-wrap reveal d1">
       <table class="moat-table">
@@ -1186,7 +1345,13 @@
             <td class="row-label">Range of skills</td>
             <td>Broad, spread across a team</td>
             <td>Usually one discipline</td>
-            <td class="me-col">Visuals, web, strategy, and automation in one person</td>
+            <td class="me-col">Research, strategy, content, creative, and automation in one person</td>
+          </tr>
+          <tr>
+            <td class="row-label">Where the thinking lives</td>
+            <td>In a deck, handed off before build</td>
+            <td>Often skipped entirely</td>
+            <td class="me-col">Carried through from research to the finished system</td>
           </tr>
           <tr>
             <td class="row-label">Systems after launch</td>
@@ -1204,13 +1369,7 @@
             <td class="row-label">Cost structure</td>
             <td>Agency overhead built in</td>
             <td>Cheap, inconsistent quality</td>
-            <td class="me-col">Freelancer price, agency output</td>
-          </tr>
-          <tr>
-            <td class="row-label">Industry focus</td>
-            <td>Broad, rarely specialized</td>
-            <td>One niche, often by accident</td>
-            <td class="me-col">Industrial, real estate, and hospitality &amp; food, chosen on purpose</td>
+            <td class="me-col">Freelancer price, agency-level thinking</td>
           </tr>
         </tbody>
       </table>
@@ -1221,11 +1380,11 @@
     <div class="cta-inner">
       <div class="reveal">
         <div class="cta-eyebrow">Still deciding?</div>
-        <div class="cta-h">Let's talk about what<br/>your business actually needs.</div>
+        <div class="cta-h">Have a problem worth solving?<br/>Let's talk about it.</div>
       </div>
       <div class="cta-actions reveal d2">
         <a href="#book" class="btn-white" data-book>Book a Free 15-min Call</a>
-        <a href="#work" data-page="work" class="btn-ghost-inv">See My Work</a>
+        <a href="#work" data-page="work" class="btn-ghost-inv">See the Work</a>
       </div>
     </div>
   </div>
@@ -1237,13 +1396,13 @@
   <div class="footer-top">
     <div>
       <div class="footer-logo">Pritam Laskar</div>
-      <div class="footer-tagline">Brand &middot; Web &middot; Growth Systems</div>
+      <div class="footer-tagline">Strategy &middot; Content &middot; Digital Systems</div>
       <div class="footer-tagline" style="margin-top:4px;">Guwahati, India &middot; Bangkok, Thailand</div>
     </div>
     <ul class="footer-links">
       <li><a href="#home" data-page="home">Home</a></li>
       <li><a href="#work" data-page="work">Work</a></li>
-      <li><a href="#expertise" data-page="expertise">Expertise</a></li>
+      <li><a href="#expertise" data-page="expertise">Approach</a></li>
       <li><a href="#book" data-book>Book a Call</a></li>
     </ul>
     <div class="footer-socs">
