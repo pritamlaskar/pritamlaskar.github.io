@@ -315,6 +315,10 @@ body.has-pointer .cursor-glow { opacity: .55; }
 .world figcaption span { display: block; color: var(--teal); margin-bottom: 4px; font-weight: 400; }
 .worlds .center { margin-top: 10px; }
 .worlds--ads { margin-top: clamp(70px, 9vw, 120px); }
+.worlds--ux { margin-top: clamp(70px, 9vw, 120px); }
+.worlds__sub { color: var(--muted); max-width: 56ch; margin-top: 10px; }
+.world--ui { flex: 0 0 auto; }
+.world--ui img { width: auto; height: min(68vh, 560px); aspect-ratio: auto; object-fit: contain; background: #f3efe6; }
 .world--ad { flex: 0 0 auto; }
 .world--ad img { width: auto; height: min(62vh, 520px); aspect-ratio: auto; object-fit: contain; background: var(--ink-3); }
 
@@ -360,7 +364,7 @@ body.has-pointer .cursor-glow { opacity: .55; }
 .skills__grid > div:first-child { position: sticky; top: 120px; }
 .skills__cols { display: grid; gap: 22px; }
 .skillset { padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: color-mix(in oklab, var(--text) 3.5%, transparent); }
-.tabs { display: inline-flex; gap: 6px; padding: 6px; margin-bottom: 20px; border-radius: 999px; border: 1px solid var(--line); background: color-mix(in oklab, var(--text) 4%, transparent); }
+.tabs { display: inline-flex; flex-wrap: wrap; gap: 6px; padding: 6px; margin-bottom: 20px; border-radius: 28px; border: 1px solid var(--line); background: color-mix(in oklab, var(--text) 4%, transparent); }
 .tab { font: inherit; font-size: .92rem; font-weight: 500; color: var(--muted); padding: 10px 20px; border: 0; border-radius: 999px; background: transparent; cursor: pointer; transition: color .3s, background .3s; }
 .tab:hover { color: var(--text); }
 .tab.active { background: var(--text); color: var(--ink); }
