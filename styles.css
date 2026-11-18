@@ -529,7 +529,8 @@ body.has-pointer .cursor-glow { opacity: 1; }
   .lab__list { grid-template-columns: 1fr; } .diagram { margin-inline: 12px; height: 320px; } .pchip { font-size: .68rem; padding: 6px 7px; min-height: 46px; } .pchip--out::before { display: none; } .colh { font-size: .52rem; } .lab__result { margin-inline: 12px; } .principles { grid-template-columns: 1fr; }
   .hero { padding-top: 110px; }
   .bento, .pains, .ex-grid, .stack__grid, .steps, .ba, .trio { grid-template-columns: 1fr; }
-  .stage__id { top: -3%; }
+  .hero__stage { display: flex; flex-direction: column; }
+  .stage__id { position: static; order: -1; align-self: flex-start; margin-bottom: 14px; animation: none; }
   .plist li { flex-direction: column; gap: 6px; }
   .cursor-glow { display: none; }
   .timeline { padding-left: 18px; } .job::before { left: -18px; }
