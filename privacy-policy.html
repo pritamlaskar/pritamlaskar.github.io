@@ -6,92 +6,202 @@
 <title>Privacy Policy | Custom Apps using Google APIs | Pritam Laskar</title>
 <meta name="description" content="How Pritam Laskar handles data in custom apps and automations built on Google APIs for clients: what is accessed, how it is used, stored and deleted." />
 <meta name="theme-color" content="#07080a" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Privacy Policy | Custom Apps using Google APIs | Pritam Laskar" />
+<meta property="og:description" content="How custom apps and automations built on Google APIs handle data." />
+<meta property="og:image" content="https://pritamlaskar.github.io/facecard.jpeg" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307080a'/%3E%3Cpath d='M14 44V20h13a8 8 0 010 16H14' fill='none' stroke='%237dffb8' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='44' r='4' fill='%237dffb8'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=ai6" />
 <style>
-  :root { --bg:#07080a; --fg:#e9e9ec; --muted:#9a9ca3; --line:#1d1f25; --accent:#f2a04a; }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body { margin:0; background:var(--bg); color:var(--fg); font-family:"Inter Tight", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.65; font-size:17px; }
-  main { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
-  a { color:var(--accent); text-underline-offset:3px; }
-  .back { display:inline-block; margin-bottom:36px; color:var(--muted); text-decoration:none; font-size:15px; }
-  .back:hover { color:var(--fg); }
-  h1 { font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:clamp(38px,6vw,56px); line-height:1.08; margin:0 0 12px; letter-spacing:-0.01em; }
-  h2 { font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:28px; margin:44px 0 8px; padding-top:28px; border-top:1px solid var(--line); }
-  p, li { color:#cfd0d6; }
-  ul { padding-left:22px; }
-  li { margin:6px 0; }
-  .meta { color:var(--muted); font-size:15px; margin:0 0 28px; }
-  .card { border:1px solid var(--line); border-radius:14px; padding:18px 20px; background:#0c0d10; margin-top:12px; }
-  address { font-style:normal; }
-  strong { color:var(--fg); font-weight:600; }
+  /* policy page: uses the site's own tokens from styles.css */
+  .pol-hero { position: relative; padding: 150px 0 56px; overflow: clip; isolation: isolate; }
+  .pol-hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background:
+    radial-gradient(50% 55% at 80% 20%, color-mix(in oklab, var(--accent) 12%, transparent), transparent 70%),
+    radial-gradient(40% 40% at 95% 60%, color-mix(in oklab, var(--blue) 14%, transparent), transparent 70%); }
+  .pol-hero h1 { font-weight: 600; font-size: clamp(2.6rem, 7vw, 5.6rem); line-height: 1.02; letter-spacing: -.04em; margin: 26px 0 0; text-wrap: balance; }
+  .pol-hero h1 em { font-size: 1.08em; letter-spacing: -.02em; background: linear-gradient(100deg, var(--accent), var(--blue) 60%, var(--accent)); background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: shimmer 6s linear infinite; }
+  .pol-hero .fine { margin: 26px 0 0; }
+  .pol { background: var(--bg-2); border-block: 1px solid var(--line); padding: clamp(60px, 9vw, 120px) 0; }
+  .pol__grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(30px, 7vw, 100px); align-items: start; }
+  .pol__toc { position: sticky; top: 120px; }
+  .pol__toc a { display: flex; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; transition: color .3s, padding .3s var(--ease); }
+  .pol__toc li:first-child a { border-top: 1px solid var(--line); }
+  .pol__toc a b { color: var(--accent); font-weight: 500; flex: none; }
+  .pol__toc a:hover { color: var(--text); padding-left: 6px; }
+  .pol__sec { padding: 40px 0; border-bottom: 1px solid var(--line); }
+  .pol__sec:first-child { padding-top: 0; }
+  .pol__n { font-family: var(--mono); font-size: .7rem; letter-spacing: .14em; color: var(--accent); margin-bottom: 12px; }
+  .pol__sec h2 { font-weight: 600; font-size: clamp(1.5rem, 2.6vw, 2.15rem); letter-spacing: -.03em; line-height: 1.1; margin-bottom: 16px; text-wrap: balance; }
+  .pol__sec p, .pol__sec li { color: var(--muted); max-width: 62ch; }
+  .pol__sec p + p { margin-top: 12px; }
+  .pol__sec ul { margin-top: 14px; }
+  .pol__sec li { position: relative; padding: 7px 0 7px 28px; }
+  .pol__sec li::before { content: ""; position: absolute; left: 0; top: 1.1em; width: 14px; height: 1px; background: var(--accent); }
+  .pol__sec p a, .pol__sec address a { color: var(--text); background: linear-gradient(90deg, var(--accent), var(--blue)) left bottom / 100% 1px no-repeat; padding-bottom: 2px; transition: color .3s; }
+  .pol__sec p a:hover, .pol__sec address a:hover { color: var(--accent); }
+  .pol__card { margin-top: 20px; max-width: 420px; border: 1px solid var(--line-2); border-radius: 22px; padding: 24px 26px;
+    background: linear-gradient(180deg, color-mix(in oklab, var(--panel-2) 90%, transparent), var(--panel)); box-shadow: 0 40px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 color-mix(in oklab, var(--text) 8%, transparent); }
+  .pol__card .pol__name { color: var(--text); font-weight: 600; font-size: 1.15rem; margin-bottom: 8px; }
+  .pol__card address { font-style: normal; color: var(--muted); line-height: 1.8; }
+  @media (max-width: 900px) { .pol__grid { grid-template-columns: 1fr; } .pol__toc { position: static; display: none; } .pol-hero { padding-top: 130px; } }
 </style>
 </head>
 <body>
-<main>
-  <a class="back" href="/">&larr; pritamlaskar.github.io</a>
 
-  <h1>Privacy Policy</h1>
-  <p class="meta">Custom apps and automations using Google APIs &middot; Effective 23 November 2026 &middot; Last updated 23 November 2026</p>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
 
-  <p>I am Pritam Laskar, a freelance developer based in Bangkok, Thailand. I build custom apps and automations for businesses, and some of them connect to Google services through Google APIs (for example Google Sheets, Drive, Calendar, Gmail or YouTube). This policy explains how those apps handle data. It applies to the apps and API integrations I build and run, for clients and for my own business tools.</p>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="/" aria-label="Pritam Laskar, home">
+    <span class="nav__mark"><img src="facecard.jpeg" alt="" width="40" height="40" /></span>
+    <span class="nav__name">Pritam Laskar</span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary">
+    <a href="/#solutions">What I fix</a>
+    <a href="/#process">How it works</a>
+    <a href="/#experience">Experience</a>
+    <a href="/#about">About</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#book" class="nav__cta magnetic">Book a free call <span aria-hidden="true">↗</span></a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+</header>
 
-  <h2>Who decides what data an app handles</h2>
-  <p>Each app is built for a specific purpose agreed with the client who commissions it. The client decides which Google account and data the app works with, and I process that data only to build, run and support the app. I do not use it for any purpose of my own.</p>
+<main id="top">
 
-  <h2>What an app may access</h2>
-  <p>An app can only reach data that the person signing in approves on Google&rsquo;s own consent screen, and only within the permissions (&ldquo;scopes&rdquo;) shown there. I request the minimum scopes an app needs. Depending on the app, that can include:</p>
-  <ul>
-    <li>spreadsheet, document or file contents the app is set up to read or write;</li>
-    <li>calendar events or contact details the app is set up to read or create;</li>
-    <li>email messages or labels, only where the app&rsquo;s purpose requires it;</li>
-    <li>YouTube channel and video information, and uploading or scheduling videos on a channel the user owns.</li>
-  </ul>
-  <p>I do not ask for access that an app does not need, and an app never reads data from Google services it was not set up to use.</p>
-
-  <h2>How the data is used</h2>
-  <ul>
-    <li>Only to provide the features of that app to the person who authorised it.</li>
-    <li>It is not sold, rented or used for advertising, profiling or marketing.</li>
-    <li>It is not used to develop, improve or train generalised AI or machine-learning models.</li>
-    <li>No one, including me, reads the content unless needed to support the user at their request, to investigate abuse or security problems, or to comply with the law.</li>
-  </ul>
-
-  <h2>Sharing</h2>
-  <p>I do not transfer Google user data to third parties except as needed to provide the app&rsquo;s features (for example cloud hosting, or an automation or AI service the client has approved for that app), to follow the law, or as part of a business transfer that keeps these protections. Any such provider is used only to run the feature, and I prefer settings that stop providers from keeping or training on the data where that option exists.</p>
-
-  <h2>Google API Services</h2>
-  <p>The use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Apps that use YouTube API Services are also subject to the <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
-
-  <h2>Storage and security</h2>
-  <ul>
-    <li>Sign-in tokens and keys are kept as encrypted secrets in private, access-controlled environments, never in public code or shared documents.</li>
-    <li>Data moves over encrypted (HTTPS) connections.</li>
-    <li>Access is limited to the people who need it to run the app, and the apps request the smallest permissions that work.</li>
-  </ul>
-  <p>No system is perfectly secure, but I take reasonable steps to protect the data an app handles.</p>
-
-  <h2>Retention and deletion</h2>
-  <p>Data an app receives is kept only for as long as the app needs it to work, or as agreed with the client. When an engagement ends, or on request, I delete the stored tokens and any copies of data I hold. Any user can revoke an app&rsquo;s access to their Google account at any time at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</p>
-
-  <h2>Children</h2>
-  <p>These apps are business tools and are not directed at children.</p>
-
-  <h2>Changes to this policy</h2>
-  <p>If this policy changes, the new version will be posted on this page with an updated date.</p>
-
-  <h2>Contact</h2>
-  <p>Questions, access or deletion requests:</p>
-  <div class="card">
-    <p style="margin:0 0 6px"><strong>Pritam Laskar</strong></p>
-    <address>
-      39 Si Lom Rd, Si Lom<br />
-      Bangkok 10500, Thailand<br />
-      <a href="mailto:itspmlaskar@gmail.com">itspmlaskar@gmail.com</a>
-    </address>
+<section class="pol-hero">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="pip"></span> Privacy Policy</p>
+    <h1 class="reveal d1">How my apps handle <em>your data.</em></h1>
+    <p class="lede reveal d2">Custom apps and automations I build on Google APIs, explained in plain language: what they can access, how the data is used, stored and deleted.</p>
+    <p class="fine reveal d3">Effective 23 November 2026 &middot; Last updated 23 November 2026</p>
   </div>
+</section>
+
+<section class="pol">
+  <div class="wrap pol__grid">
+    <aside class="pol__toc" aria-label="On this page">
+      <p class="kicker">On this page</p>
+      <ol>
+          <li><a href="#p1"><b>01</b><span>Who decides what data an app handles</span></a></li>
+          <li><a href="#p2"><b>02</b><span>What an app may access</span></a></li>
+          <li><a href="#p3"><b>03</b><span>How the data is used</span></a></li>
+          <li><a href="#p4"><b>04</b><span>Sharing</span></a></li>
+          <li><a href="#p5"><b>05</b><span>Google API Services</span></a></li>
+          <li><a href="#p6"><b>06</b><span>Storage and security</span></a></li>
+          <li><a href="#p7"><b>07</b><span>Retention and deletion</span></a></li>
+          <li><a href="#p8"><b>08</b><span>Children</span></a></li>
+          <li><a href="#p9"><b>09</b><span>Changes to this policy</span></a></li>
+          <li><a href="#p10"><b>10</b><span>Contact</span></a></li>
+      </ol>
+    </aside>
+    <article class="pol__body">
+      <section class="pol__sec reveal" id="p0">
+        <p class="pol__n">Overview</p>
+        <h2>About this policy</h2>
+        <p>I am Pritam Laskar, a freelance developer based in Bangkok, Thailand. I build custom apps and automations for businesses, and some of them connect to Google services through Google APIs (for example Google Sheets, Drive, Calendar, Gmail or YouTube). This policy explains how those apps handle data. It applies to the apps and API integrations I build and run, for clients and for my own business tools.</p>
+      </section>
+        <section class="pol__sec reveal" id="p1">
+          <p class="pol__n">01</p>
+          <h2>Who decides what data an app handles</h2>
+      <p>Each app is built for a specific purpose agreed with the client who commissions it. The client decides which Google account and data the app works with, and I process that data only to build, run and support the app. I do not use it for any purpose of my own.</p>
+        </section>
+        <section class="pol__sec reveal" id="p2">
+          <p class="pol__n">02</p>
+          <h2>What an app may access</h2>
+      <p>An app can only reach data that the person signing in approves on Google&rsquo;s own consent screen, and only within the permissions (&ldquo;scopes&rdquo;) shown there. I request the minimum scopes an app needs. Depending on the app, that can include:</p>
+      <ul>
+        <li>spreadsheet, document or file contents the app is set up to read or write;</li>
+        <li>calendar events or contact details the app is set up to read or create;</li>
+        <li>email messages or labels, only where the app&rsquo;s purpose requires it;</li>
+        <li>YouTube channel and video information, and uploading or scheduling videos on a channel the user owns.</li>
+      </ul>
+      <p>I do not ask for access that an app does not need, and an app never reads data from Google services it was not set up to use.</p>
+        </section>
+        <section class="pol__sec reveal" id="p3">
+          <p class="pol__n">03</p>
+          <h2>How the data is used</h2>
+      <ul>
+        <li>Only to provide the features of that app to the person who authorised it.</li>
+        <li>It is not sold, rented or used for advertising, profiling or marketing.</li>
+        <li>It is not used to develop, improve or train generalised AI or machine-learning models.</li>
+        <li>No one, including me, reads the content unless needed to support the user at their request, to investigate abuse or security problems, or to comply with the law.</li>
+      </ul>
+        </section>
+        <section class="pol__sec reveal" id="p4">
+          <p class="pol__n">04</p>
+          <h2>Sharing</h2>
+      <p>I do not transfer Google user data to third parties except as needed to provide the app&rsquo;s features (for example cloud hosting, or an automation or AI service the client has approved for that app), to follow the law, or as part of a business transfer that keeps these protections. Any such provider is used only to run the feature, and I prefer settings that stop providers from keeping or training on the data where that option exists.</p>
+        </section>
+        <section class="pol__sec reveal" id="p5">
+          <p class="pol__n">05</p>
+          <h2>Google API Services</h2>
+      <p>The use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Apps that use YouTube API Services are also subject to the <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+        </section>
+        <section class="pol__sec reveal" id="p6">
+          <p class="pol__n">06</p>
+          <h2>Storage and security</h2>
+      <ul>
+        <li>Sign-in tokens and keys are kept as encrypted secrets in private, access-controlled environments, never in public code or shared documents.</li>
+        <li>Data moves over encrypted (HTTPS) connections.</li>
+        <li>Access is limited to the people who need it to run the app, and the apps request the smallest permissions that work.</li>
+      </ul>
+      <p>No system is perfectly secure, but I take reasonable steps to protect the data an app handles.</p>
+        </section>
+        <section class="pol__sec reveal" id="p7">
+          <p class="pol__n">07</p>
+          <h2>Retention and deletion</h2>
+      <p>Data an app receives is kept only for as long as the app needs it to work, or as agreed with the client. When an engagement ends, or on request, I delete the stored tokens and any copies of data I hold. Any user can revoke an app&rsquo;s access to their Google account at any time at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</p>
+        </section>
+        <section class="pol__sec reveal" id="p8">
+          <p class="pol__n">08</p>
+          <h2>Children</h2>
+      <p>These apps are business tools and are not directed at children.</p>
+        </section>
+        <section class="pol__sec reveal" id="p9">
+          <p class="pol__n">09</p>
+          <h2>Changes to this policy</h2>
+      <p>If this policy changes, the new version will be posted on this page with an updated date.</p>
+        </section>
+        <section class="pol__sec reveal" id="p10">
+          <p class="pol__n">10</p>
+          <h2>Contact</h2>
+      <p>Questions, access or deletion requests:</p>
+      <div class="pol__card">
+        <p class="pol__name">Pritam Laskar</p>
+        <address>
+          39 Si Lom Rd, Si Lom<br />
+          Bangkok 10500, Thailand<br />
+          <a href="mailto:itspmlaskar@gmail.com">itspmlaskar@gmail.com</a>
+        </address>
+      </div>
+        </section>
+    </article>
+  </div>
+</section>
+
 </main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__big" aria-hidden="true">Pritam&nbsp;Laskar</div>
+    <div class="footer__row">
+      <span>© <span id="year">2026</span> Pritam Laskar · Automation &amp; AI for growing businesses</span>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/pritamlaskar/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#top">Back to top ↑</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js?v=ai6" defer></script>
 </body>
 </html>
