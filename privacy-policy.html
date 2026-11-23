@@ -27,8 +27,9 @@
     -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: shimmer 6s linear infinite; }
   .pol-hero .fine { margin: 26px 0 0; }
   .pol { background: var(--bg-2); border-block: 1px solid var(--line); padding: clamp(60px, 9vw, 120px) 0; }
-  .pol__grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(30px, 7vw, 100px); align-items: start; }
-  .pol__toc { position: sticky; top: 120px; }
+  .pol__grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(220px,.6fr); gap: clamp(30px, 7vw, 100px); align-items: start; }
+  .pol__toc { position: sticky; top: 120px; grid-column: 2; grid-row: 1; }
+  .pol__body { grid-column: 1; grid-row: 1; }
   .pol__toc a { display: flex; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; transition: color .3s, padding .3s var(--ease); }
   .pol__toc li:first-child a { border-top: 1px solid var(--line); }
   .pol__toc a b { color: var(--accent); font-weight: 500; flex: none; }
@@ -48,7 +49,7 @@
     background: linear-gradient(180deg, color-mix(in oklab, var(--panel-2) 90%, transparent), var(--panel)); box-shadow: 0 40px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 color-mix(in oklab, var(--text) 8%, transparent); }
   .pol__card .pol__name { color: var(--text); font-weight: 600; font-size: 1.15rem; margin-bottom: 8px; }
   .pol__card address { font-style: normal; color: var(--muted); line-height: 1.8; }
-  @media (max-width: 900px) { .pol__grid { grid-template-columns: 1fr; } .pol__toc { position: static; display: none; } .pol-hero { padding-top: 130px; } }
+  @media (max-width: 900px) { .pol__grid { grid-template-columns: 1fr; } .pol__body, .pol__toc { grid-column: 1; grid-row: auto; } .pol__toc { position: static; display: none; } .pol-hero { padding-top: 130px; } }
 </style>
 </head>
 <body>
